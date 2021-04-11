@@ -1,1 +1,3 @@
-This folder is a git repository 
+This folder is a git repository cloned from
+https://github.com/joy1954islam/uri-problem-solution-in-python.git
+to get help.

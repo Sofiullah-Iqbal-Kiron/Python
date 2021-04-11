@@ -1,4 +1,5 @@
 # Let's your python scripts automate
+# Interface changed, so given point are also changed bra.
 
 import pyautogui
 
