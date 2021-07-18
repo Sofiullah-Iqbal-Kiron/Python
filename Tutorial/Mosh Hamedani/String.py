@@ -1,5 +1,5 @@
 # Mosh Hamedani the teacher.
-# Python  IDE is faster.
+# Python IDE is faster.
 
 first = "Sofiullah"
 second = "Iqbal"

@@ -1,5 +1,5 @@
 # Let's your python scripts automate
-# Interface changed, so given point are also changed bra.
+# Interface changed, so points those are inserted also changed bra.
 
 import pyautogui
 
