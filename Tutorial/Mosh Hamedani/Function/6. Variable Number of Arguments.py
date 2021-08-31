@@ -3,7 +3,7 @@
 def print_all(*numbers):
     for number in numbers:
         print(number)
-    print(numbers)  # Will print all the objects as a tuple that are notated by parenthesis.
+    print(numbers)  # Print all the objects as a tuple (tuples are noted by parenthesis).
 
 
 print_all(1, 2, 3, 4, 5)

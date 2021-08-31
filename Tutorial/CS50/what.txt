@@ -1,0 +1,6 @@
+Topics:
+1. built-in functions: print(), int()
+2. data types: int, float, str, bool, none
+3. user input with prompt
+4. formatted string
+5. sequences to store collection of data, like str to store char collection.

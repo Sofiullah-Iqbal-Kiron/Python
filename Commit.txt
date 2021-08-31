@@ -1,3 +1,9 @@
 Now this is a git repository.
 
 The red colour of a file name indicates that the file is in unknown status to the VCS.
+
+Python reference(The right way): https://python-reference.readthedocs.io/en/latest/index.html
+
+Python is space/indentation sensitive.
+
+IDE will highlight it in different color.
