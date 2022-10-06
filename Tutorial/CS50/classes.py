@@ -7,7 +7,7 @@ class Flight:
     # It is basically a magic method.
     def __init__(self, capacity):
         self.capacity = capacity
-        self.passengers = []
+        self.passengers = [] # Declaring this variable as a list.
 
     def open_seats(self):
         return self.capacity - len(self.passengers)

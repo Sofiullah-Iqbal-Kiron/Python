@@ -5,7 +5,8 @@ from tkinter import *
 
 root = Tk()
 root.title('Simple Calculator')  # Just type-in whatever you want
-root.resizable(False, False)  # OR, root.resizable(0/1/True, 0/1/True) or, root.resizable(width=none, height=none)
+# OR, root.resizable(0/1/True, 0/1/True) or, root.resizable(width=none, height=none)
+root.resizable(False, False)
 root.configure(bg='gray')
 
 # Entry for user input

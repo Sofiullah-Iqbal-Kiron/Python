@@ -7,3 +7,10 @@ Python reference(The right way): https://python-reference.readthedocs.io/en/late
 Python is space/indentation sensitive.
 
 IDE will highlight it in different color.
+
+.idea folder indicates that this is a pycharm projet.
+
+To convert a csv file into a table on vs-code(CSV to Table - this extension is required),
+select and open the csv|tsv file -> ctrl+shift+p -> type "convert to table from csv" and hit enter.
+
+To autosave something on vs-code: ctrl+shift+p -> toggle auto save
