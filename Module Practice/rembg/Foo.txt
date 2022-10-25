@@ -1,0 +1,3 @@
+Remove background.
+
+Link: https://github.com/danielgatis/rembg
