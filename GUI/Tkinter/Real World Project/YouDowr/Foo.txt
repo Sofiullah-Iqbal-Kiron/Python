@@ -1,0 +1,3 @@
+GUI applicatin: YouTube watchable video downloader using "pytube" API.
+
+API Reference: https://pytube.io/en/latest/#
