@@ -5,11 +5,14 @@ import sys
 from PyQt6.QtWidgets import (
     QApplication,
     QMainWindow,
+    QWidget,
     QPushButton,
     QDateTimeEdit,
     QDial,
     QLCDNumber,
+    QComboBox,
     QFontComboBox,
+    QVBoxLayout,
 )
 
 # Essential qt app.
@@ -21,8 +24,22 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         self.setWindowTitle("Exploring Widgets!")
-        widget = QFontComboBox()
-        self.setCentralWidget(widget)  # QMainWindow specific method to add a widget in center.
+
+        comboBox = QComboBox()
+        comboBox.addItems(["Kiron", "Nirob", "Israt", "Tisha", "Meha"])
+        comboBox.currentTextChanged.connect(
+            lambda x: print("Changed, now:", x))
+
+        fontComboBox = QFontComboBox()
+
+        layout = QVBoxLayout()
+        layout.addWidget(comboBox)
+        layout.addWidget(fontComboBox)
+
+        # QMainWindow specific method to add a widget in center.
+        mainWidget = QWidget()
+        mainWidget.setLayout(layout)
+        self.setCentralWidget(mainWidget)
         self.show()
 
 

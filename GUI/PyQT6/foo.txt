@@ -22,3 +22,6 @@ Head over to the QWidget documentation: https://doc.qt.io/qt-6/widget-classes.ht
 
 PyQT6 is just a bindings, we can also use Pyside6 or other bindings as well, remaining codes mostly unchanged.
 Widget is the name given to UI component which user can interact with.
+
+Available Styles: print(QStyleFactory.keys())
+Install more styles: https://stackoverflow.com/questions/63477276/add-qstyles-to-pyqt5

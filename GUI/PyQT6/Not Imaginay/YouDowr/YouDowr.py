@@ -13,12 +13,18 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
+        print(QStyleFactory.keys())
+        self.setStyle(QStyleFactory.create("windowsvista"))
+
         self.setWindowTitle("YouDowr!")
 
         mainWidget = QWidget()
         self.inputLink = QLineEdit()
-        download = QPushButton("Download!")
-        download.clicked.connect(self.downloadMe)
+        self.inputLink.textChanged.connect(self.inputLinkChanged)
+
+        # Download button.
+        self.download = QPushButton("Download!")
+        self.download.clicked.connect(self.downloadMe)
 
         firstRowLay = QHBoxLayout()
         firstRowLay.addWidget(QLabel("Insert linK: "))
@@ -29,15 +35,20 @@ class MainWindow(QMainWindow):
         secondRow = QVBoxLayout()
         secondRow.setSpacing(5)
         secondRow.addWidget(firstRow)
-        secondRow.addWidget(download)
+        secondRow.addWidget(self.download)
 
         mainWidget.setLayout(secondRow)
-        self.setCentralWidget(mainWidget)  # QMainWindow specific method to add a widget in center.
+        # QMainWindow specific method to add a widget in center.
+        self.setCentralWidget(mainWidget)
         self.show()
 
     def downloadMe(self):
-        yt = pytube.YouTube(self.inputLink.text().strip())
-        yt.streams.first().download()
+        pass
+        # yt = pytube.YouTube(self.inputLink.text().strip())
+        # yt.streams.first().download()
+
+    def inputLinkChanged(self, line):
+        self.download.setText(line)
 
 
 window = MainWindow()
