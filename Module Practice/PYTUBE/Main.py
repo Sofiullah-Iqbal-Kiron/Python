@@ -1,6 +1,10 @@
 from pytube import YouTube
 
 
+# Progressive streams have the video and audio in a single file.
+# 2 types of stream: progressive, adaptive(DASH)
+
+
 def printCompleted(a, b):
     print(type(a), type(b))
     print("Download completed & saved on this path:", b)
@@ -12,7 +16,8 @@ def justDownloading(a, b, c):
 
 
 # Create a YouTube object. Supply valid youtube watch url.
-yt = YouTube("https://youtu.be/c3_NntYhzV4")
+yt = YouTube("https://youtu.be/zuaLWHiRXkg",
+             on_complete_callback=printCompleted)
 
 # Print the title of this youtube object(a single youtube video).
 # print("Video title:", yt.title)
@@ -21,7 +26,8 @@ yt = YouTube("https://youtu.be/c3_NntYhzV4")
 # print("Thumbnail url:", yt.thumbnail_url)
 
 # Neat, right? Let's download the video in this directory.
-# yt.streams.last().download()
+yt.streams.filter(res="1080p").last().download(filename="theVideo.mp4")
+yt.streams.filter(type="audio").first().download(filename="theAudio.mp3")
 
-for a in yt.streams:
-    print(type(a))
+# for a in yt.streams:
+#     print(a)
